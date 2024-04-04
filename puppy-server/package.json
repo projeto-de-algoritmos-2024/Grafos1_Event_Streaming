@@ -1,0 +1,12 @@
+{
+  "name": "puppy-server",
+  "version": "0.0.1",
+  "description": "Puppy stream server",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "ts-node src/main.ts"
+  },
+  "author": "Guilherme Marques",
+  "license": "ISC"
+}
