@@ -1,0 +1,14 @@
+{
+  "name": "puppy-client",
+  "version": "0.0.1",
+  "description": "Client",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "dev:producer": "ts-node src/produce.ts",
+    "dev:consumer": "ts-node src/consume.ts"
+  },
+  "author": "Guilherme Marques",
+  "license": "ISC"
+}

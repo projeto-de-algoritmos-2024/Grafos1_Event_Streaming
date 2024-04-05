@@ -12,9 +12,11 @@
   "author": "Guilherme Marques",
   "license": "ISC",
   "workspaces": [
-    "puppy-server"
+    "puppy-server",
+    "puppy-client"
   ],
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@types/node": "^20.12.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"

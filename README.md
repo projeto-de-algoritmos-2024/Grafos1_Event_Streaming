@@ -39,6 +39,7 @@ Operação:
   topic: string,
   metadata: Record<string, any>,
   data: Buffer | null
+  messageId: string | null
 }
 ```
 
