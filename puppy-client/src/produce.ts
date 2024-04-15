@@ -10,10 +10,12 @@ const socket = net.createConnection({
 
 const toConfirm = new Set()
 
+const topic = process.argv[2] ?? `/${faker.word.words(3).replace(' ', '/')}/`
+
 function createMessage(): Message {
   return new OperationMessage({
     operation: 'PUBLISH',
-    topic: `/${faker.word.words(3).replace(' ', '/')}/`,
+    topic: topic,
     messageId: randomUUID(),
     data: Buffer.from(faker.hacker.phrase())
   })
@@ -24,10 +26,6 @@ const interval = setInterval(() => {
   socket.write(MessageCodec.encode(message))
   toConfirm.add((message as OperationMessage).messageId)
 }, 1000)
-
-const interval2 = setInterval(() => {
-  socket.write('This is a faulty message!')
-}, 4000)
 
 socket.on('data', data => {
   const message = MessageCodec.decode(data)
@@ -46,7 +44,6 @@ socket.on('data', data => {
 
 socket.on('close', () => {
   clearInterval(interval)
-  clearInterval(interval2)
 })
 
 socket.on('error', () => {
