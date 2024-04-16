@@ -35,7 +35,7 @@ Possíveis ações no sistema:
 - Nova mensagem no tópico (server -> client)
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+Video: https://youtu.be/XjQN4tVjezg
 
 ## Instalação 
 **Linguagem**: Node 21
